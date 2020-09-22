@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+#left {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    background-color: #00064B;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 3em;
+    flex-shrink: 0;
+}
+
+#topLeft {
+    height: 17vh;
+    margin: 0;
+    border-style: solid;
+    border-bottom: 0.5;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #0010C2;
+}
+
+#midLeft {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 77vh;
+}
+
+#bottomLeft {
+    height: 9vh;
+    margin: 0;
+    border-style: solid;
+    border-bottom: 0;
+    border-top: 0.5;
+    border-left: 0;
+    border-right: 0;
+    border-color: #0010C2;
+}
+
+.navlinks {
+    margin: 0;
+    padding: 0;
+}
+
+.navlink {
+    list-style-type: none;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 0.75em;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.navlink > a {
+    margin: 0;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.navlink:hover {
+    background-color: #0012D5;
+}
+
+#right {
+    background: url("monkey.jpg");
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-direction: row;
+    overflow-y: auto;
+    margin: 0;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+}
+
+.color-overlay {
+    height: 100%;
+    width: 100%;
+    background: #00064B;
+    opacity: 0.55;
+    position: absolute;
+}
+
+#center-view {
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    width: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+img {
+    margin: auto;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.75em;
+    border-color: #ACB1E7;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#name {
+    margin: 0;
+    margin-top: 0.5em;
+    padding: 0;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#profession {
+    margin: 0;
+    margin-top: 0.2em;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
