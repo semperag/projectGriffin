@@ -16,14 +16,12 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     font-size: 3em;
     min-width: 225px;
-    min-height: 600px;
+    min-height: 100vh;
 }
 
 #topLeft {
-    height: 17vh;
     margin: 0;
     border-style: solid;
     border-bottom: 0.5;
@@ -45,11 +43,10 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    height: 74vh;
+    
 }
 
 #bottomLeft {
-    height: 9vh;
     margin: 0;
     border-style: solid;
     border-bottom: 0;
@@ -61,7 +58,6 @@ main {
     justify-content: center;
     text-align: center;
     align-content: center;
-    overflow-y: auto;
     user-select: none;
 }
 
@@ -105,14 +101,19 @@ main {
     background-color: #0012D5;
 }
 
+.current-nav {
+    background: #0012D5;
+    outline: none;
+    box-shadow: inset 0px 0px 10px #ffffff;
+}
+
 #rightPanel {
-    margin: auto;
+    margin: 0;
     background: url("JMU-sunset.jpg");
     background-size: cover;
     display: flex;
     flex-grow: 1;
     flex-direction: row;
-    height: 100vh;
     position: relative;
     min-width: 500px;
     min-height: 600px;
@@ -217,7 +218,7 @@ main {
     z-index: 1;
 }
 
-.current {
+.current-page {
     background-color: rgb(197, 117, 12);
 }
 

@@ -1,11 +1,13 @@
 const pageNumber = document.querySelectorAll('.position');
-let i = 0;
+const currnetNav = document.querySelectorAll('.navlink');
+let pageIndex = 0;
+let navIndex = 0;
 
 function forward() {
-    if (i < pageNumber.length - 1) {
-        pageNumber[i].classList.remove('current');
-        i += 1
-        pageNumber[i].classList.add('current');
+    if (pageIndex < pageNumber.length - 1) {
+        pageNumber[pageIndex].classList.remove('current-page');
+        pageIndex += 1
+        pageNumber[pageIndex].classList.add('current-page');
     }
 }
 
