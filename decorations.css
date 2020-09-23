@@ -149,16 +149,20 @@ img {
     text-align: center;
 }
 
-.arrow-down {
+.arrow {
     text-align: center;
     align-content: center;
     justify-content: center;
     display: flex;
     font-size: 3.5em;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.arrow-down {
+.arrow-down:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
 }
+
 
 #right-view {
     margin: auto;
@@ -200,4 +204,9 @@ img {
     color: white;
     font-size: 1.5em;
     transform: rotate(-90deg);
+}
+
+.credits:hover {
+    cursor: pointer;
+    background-color: rgb(240, 188, 120);;
 }
