@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-size: cover;
-    background: url(blue-background.jpg);
+    background: url(orange-topleft-background1.jpg);
 }
 
 main {
@@ -122,7 +122,7 @@ main {
 h1 {
     width: 100%;
     font-size: 225%;
-    color: rgb(255, 182, 46);
+    color: rgb(240, 218, 255);
 }
 
 table {
