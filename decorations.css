@@ -115,6 +115,7 @@ main {
     flex-grow: 1;
     position: relative;
     justify-content: center;
+    overflow-y: hidden;
     min-width: 500px;
     min-height: 600px;
 }
