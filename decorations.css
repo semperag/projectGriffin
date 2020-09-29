@@ -1,11 +1,13 @@
 body {
     margin: 0;
+    background-color: black;
 }
 
 main {
     display: flex;
+    position: relative;
     flex-grow: 1;
-    flex-direction: row;
+    flex-direction: inline-block;
 }
 
 #leftPanel {
@@ -65,9 +67,9 @@ main {
     text-decoration: none;
     color: white;
 }
-.social-link > a {
-    text-decoration: none;
-    color: white;
+
+.social-link:hover {
+    cursor: pointer;
 }
 
 .navlinks {
@@ -84,21 +86,21 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: left;
-}
-
-.navlink > a {
-    margin: 0;
+    border-style: solid;
+    border-bottom: 0.5;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #636ff0;
     padding-left: 15px;
     padding-top: 7px;
     padding-bottom: 7px;
-    width: 100%;
     text-decoration: none;
-    color: white;
-    display: block;
 }
 
 .navlink:hover {
     background-color: #0012D5;
+    cursor: pointer;
 }
 
 .current-nav {
@@ -109,74 +111,41 @@ main {
 
 #rightPanel {
     margin: 0;
-    background: url("JMU-sunset.jpg");
-    background-size: cover;
     display: flex;
     flex-grow: 1;
-    flex-direction: row;
     position: relative;
+    justify-content: center;
     min-width: 500px;
     min-height: 600px;
 }
 
-.color-overlay {
+.frame {
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
     height: 100%;
     width: 100%;
-    background: #00064B;
-    opacity: 0.2;
-    position: absolute;
+    border: 0;
+    transition: transform 1.5s ease-in-out;
+    box-sizing: border-box;
 }
 
-#center-view {
-    margin: auto;
-    padding: 0;
-    height: 100%;
-    color: white;
-    font-family: sans-serif;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+.frame:not(:first-child) {
+    transform: translateY(100%);
+  }
+  
+.frame.current-frame {
+    transform: unset;
     flex-grow: 1;
-    z-index: 1;
-    max-height: 820px;
+    border: 0
+}
+  
+.frame.past-frame {
+    transform: translateY(-100%);
 }
 
-.face-picture {
-    margin: auto;
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 0.75em;
-    border-color: #ACB1E7;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    user-select: none;
-}
-
-#name {
-    margin: 0;
-    margin-top: 0.5em;
-    padding: 0;
-    display: inline-block;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-}
-
-#profession {
-    margin: 0;
-    margin-top: 0.2em;
-    font-size: 1.5em;
-    display: inline-block;
-    font-weight: bold;
-    text-align: center;
-}
-
-.arrow {
+.arrow-d {
     text-align: center;
     align-content: center;
     justify-content: center;
@@ -184,6 +153,24 @@ main {
     font-size: 3.5em;
     color: rgba(255, 255, 255, 0.5);
     user-select: none;
+    position: absolute;
+    right: 47%;
+    transform: translateX(-50%);
+    bottom: 3%;
+}
+
+.arrow-u {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    font-size: 3.5em;
+    color: rgba(255, 255, 255, 0.5);
+    user-select: none;
+    position: absolute;
+    right: 47%;
+    transform: translateX(-50%);
+    top: 3%;
 }
 
 #arrow-down:hover {
@@ -191,19 +178,25 @@ main {
     color: rgb(255, 255, 255);
 }
 
+#arrow-up:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
 
 #right-view {
-    margin: auto;
+    margin: 0;
     height: 100%;
     padding: 0px 20px 0px 0px;
     display: flex;
-    position: relative;
+    position: fixed;
     flex-direction: column;
     justify-content: center;
     align-content: flex-end;
     vertical-align: middle;
     max-height: 820px;
     min-height: 300px;
+    right: 0%;
+    top: 4%;
 }
 
 .position {
@@ -243,6 +236,7 @@ main {
     background-color: rgb(240, 188, 120);;
 }
 
+
 ::-webkit-scrollbar {
     width: 11px;
     height: 11px;
@@ -250,10 +244,10 @@ main {
 
   /* Track */
 ::-webkit-scrollbar-track {
-    background: #b4b3b3;
+    background: #a7a7a7;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background:  rgb(0, 113, 148);
+    background:  rgb(0, 125, 197);
 }
