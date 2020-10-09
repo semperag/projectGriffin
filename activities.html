@@ -9,14 +9,30 @@
     <style>
         body {
             margin: 0;
-            background: url(orange-topleft-background1.jpg);
-            background-size: cover;
             height: 100vh;
+            background-image: linear-gradient(to bottom right, #ff8e2c, #2c4cff);
+            background: cover;
+            background-repeat:no-repeat;
+            background-attachment: fixed;
             color: white;
-            overflow: hidden;
+            overflow-y: hidden;
+        }
+
+        .color-overlay {
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            background: #00064B;
+            opacity: 0.2;
+            position: fixed;
+        }
+
+        #title {
+            font-size: 3em;
         }
     </style>
     <body>
-        <h1>Activities</h1>
+        <div class="color-overlay"></div>
+        <div id="title">Activities</div>
     </body>
 </html>

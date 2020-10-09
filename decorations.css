@@ -1,6 +1,8 @@
 body {
     margin: 0;
     background-color: black;
+    opacity: 1;
+    transition: 1s opacity;
 }
 
 main {
@@ -123,6 +125,7 @@ main {
 .frame {
     margin: 0; 
     padding: 0;
+    display: flex;
     overflow: hidden;
     position: absolute;
     height: 100%;
@@ -133,16 +136,25 @@ main {
 }
 
 .frame:not(:first-child) {
+    display: flex;
     transform: translateY(100%);
   }
   
 .frame.current-frame {
+    display: flex;
     transform: unset;
     flex-grow: 1;
     border: 0
 }
   
 .frame.past-frame {
+    display: flex;
+    transform: translateY(-100%);
+}
+
+.frame.way-past-frame {
+    display: none;
+    transition: transform 1.5s ease-in-out;
     transform: translateY(-100%);
 }
 
@@ -156,6 +168,7 @@ main {
     user-select: none;
     position: absolute;
     right: 47%;
+    opacity: 0.5;
     transform: translateX(-50%);
     bottom: 3%;
 }
@@ -170,8 +183,17 @@ main {
     user-select: none;
     position: absolute;
     right: 47%;
+    opacity: 0.5;
     transform: translateX(-50%);
     top: 3%;
+}
+
+.arrow-u:hover {
+    opacity: 1;
+}
+
+.arrow-d:hover {
+    opacity: 1;
 }
 
 #arrow-down:hover {

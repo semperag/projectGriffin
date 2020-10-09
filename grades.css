@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    background-size: cover;
-    background: url(orange-topleft-background1.jpg);
+    background-image: linear-gradient(to bottom right, #ff8e2c, #2c4cff);
+    height: 100vh;
 }
 
 main {
@@ -27,6 +27,21 @@ main {
     align-items: center;
 }
 
+.color-overlay {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: #00064B;
+    opacity: 0.2;
+    position: absolute;
+}
+
+h1 {
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 40px;
+}
+
 .gpa {
     position: fixed;
     color: white;
@@ -48,6 +63,7 @@ main {
     display: flex;
     align-items: center;
     flex-grow: 0.3;
+    margin-top: 15px;
 }
 
 .selector {
