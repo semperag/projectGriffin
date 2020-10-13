@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #ff8e2c, #2c4cff);
+    background: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+.color-overlay {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #00064B;
+    opacity: 0.2;
+    position: fixed;
+}
+
+#content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 90%;
+}
+
+#title {
+    display: flex;
+    font-size: 3em;
+    font-weight: bold;
+    flex-grow: 1;
+    z-index: 1;
+    align-items: center;
+} 
+
+#phone, #email, a {
+    display: flex;
+    font-size: 2.5em;
+    font-weight: bold;
+    flex-grow: 1;
+    z-index: 1;
+    align-items: center;
+}

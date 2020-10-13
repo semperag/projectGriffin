@@ -168,7 +168,7 @@ main {
     user-select: none;
     position: absolute;
     right: 47%;
-    opacity: 0.5;
+    opacity: 0.3;
     transform: translateX(-50%);
     bottom: 3%;
 }
@@ -183,7 +183,7 @@ main {
     user-select: none;
     position: absolute;
     right: 47%;
-    opacity: 0.5;
+    opacity: 0.3;
     transform: translateX(-50%);
     top: 3%;
 }
