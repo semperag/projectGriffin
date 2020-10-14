@@ -147,7 +147,7 @@ figure {
 figcaption {
     display: flex;
     justify-content: center;
-    font-size: 0.8em;
+    font-size: 0.7em;
     flex-grow: 0;
 }
 
