@@ -131,15 +131,15 @@ figure {
     margin: 0;
 }
 
-.image {
+.image, .high-school-image {
     display: none;
 }
 
-.current-image {
+.current-image, .current-high-school-image {
     display: inline-block;
 }
 
-.current-image > img {
+.current-image > img, .current-high-school-image > img {
     height: 85%;
     width: 100%;
 }
@@ -149,13 +149,6 @@ figcaption {
     justify-content: center;
     font-size: 0.8em;
     flex-grow: 0;
-}
-
-.high-school-image {
-    display: flex;
-    flex-grow: 1;
-    max-width: 190px; 
-    max-height: 160px;
 }
 
 .videogame-image > .interest-content {
@@ -190,7 +183,8 @@ figcaption {
 
 }
 
-#arrow-right, #arrow-left {
+#vacation-arrow-right, #vacation-arrow-left, 
+#high-school-arrow-right, #high-school-arrow-left {
     display: flex;
     text-align: center;
     align-items: center;
@@ -209,17 +203,15 @@ figcaption {
     z-index: 1;
 }
 
-#arrow-left:hover, #arrow-right:hover {
+#vacation-arrow-right:hover, #vacation-arrow-left:hover,
+#high-school-arrow-right:hover, #high-school-arrow-left:hover {
     cursor: pointer;
     color: rgb(255, 255, 255);
     background-color: rgba(58, 58, 58, 0.5);
 }
 
-#arrow-left:active, #arrow-right:active {
+#vacation-arrow-right:active, #vacation-arrow-left:active {
     background-color: rgba(37, 37, 37, 0.753);
-}
-
-#arrow-right:hover {
 }
 
 /* Fading animation */

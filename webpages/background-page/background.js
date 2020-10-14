@@ -1,41 +1,80 @@
-const images = document.querySelectorAll('.image');
-let imageIndex = 0;
+const vacImages = document.querySelectorAll('.image');
+const schoolImages = document.querySelectorAll('.high-school-image');
+let schoolIndex = 0;
+let vacIndex = 0;
 
-function forward() {
+function vacForward() {
 
-        images[imageIndex].classList.remove('current-image');
+    vacImages[vacIndex].classList.remove('current-image');
 
-        if (imageIndex >= images.length - 1) {
-            imageIndex = 0;
-        }
-        else {
-            imageIndex += 1;
-        }
+    if (vacIndex >= vacImages.length - 1) {
+        vacIndex = 0;
+    }
+    else {
+        vacIndex += 1;
+    }
 
-        images[imageIndex].classList.add('current-image');
+    vacImages[vacIndex].classList.add('current-image');
 }
 
-function backward() {
+function vacBackward() {
 
-        images[imageIndex].classList.remove('current-image');
-        
-        if (imageIndex <= 0) {
-            imageIndex = images.length - 1;
-        }
-        else {
-            imageIndex -= 1;
-        }
+    vacImages[vacIndex].classList.remove('current-image');
+    
+    if (vacIndex <= 0) {
+        vacIndex = vacImages.length - 1;
+    }
+    else {
+        vacIndex -= 1;
+    }
 
-        images[imageIndex].classList.add('current-image');
-        images[imageIndex].classList.remove('past-image');
+    vacImages[vacIndex].classList.add('current-image');
 }
 
-let el = document.getElementById('arrow-right');
+function schoolForward() {
+
+    schoolImages[schoolIndex].classList.remove('current-high-school-image');
+
+    if (schoolIndex >= schoolImages.length - 1) {
+        schoolIndex = 0;
+    }
+    else {
+        schoolIndex += 1;
+    }
+
+    schoolImages[schoolIndex].classList.add('current-high-school-image');
+}
+
+function schoolBackward() {
+    
+    schoolImages[schoolIndex].classList.remove('current-high-school-image');
+
+    if (schoolIndex <= 0) {
+        schoolIndex = schoolImages.length - 1;
+    }
+    else {
+        schoolIndex -= 1;
+    }
+
+    schoolImages[schoolIndex].classList.add('current-high-school-image');
+}
+
+let el = document.getElementById('vacation-arrow-right');
 if(el){
-    el.addEventListener('click', forward);
+    el.addEventListener('click', vacForward);
 }
 
-el = document.getElementById('arrow-left');
+el = document.getElementById('vacation-arrow-left');
 if(el){
-    el.addEventListener('click', backward);
+    el.addEventListener('click', vacBackward);
+}
+
+el = document.getElementById('high-school-arrow-right');
+if(el){
+    el.addEventListener('click', schoolForward);
+}
+
+el = document.getElementById('high-school-arrow-left');
+if(el){
+    el.addEventListener('click', schoolBackward);
 }
