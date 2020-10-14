@@ -118,7 +118,7 @@ body {
     flex-direction: row;
     position: relative;
     height: 200px;
-    width: 400px;
+    width: 425px;
     box-sizing: border-box;
 }
 
@@ -127,7 +127,7 @@ figure {
     flex-direction: column;
     justify-content: center;
     height: 180px;
-    width: 85%;
+    width: 80%;
     margin: 0;
 }
 
@@ -183,6 +183,7 @@ figcaption {
 
 .arrow-l, .arrow-r {
     display: flex;
+    position: relative;
     flex-grow: 1;
     height: 85%;
     justify-content: center;
@@ -200,24 +201,21 @@ figcaption {
     user-select: none;
     position: absolute;
     flex-grow: 1;
-    height: 85%;
+    height: 100%;
+    width: 100%;
     bottom: 25%;
     top: 1%;
     
     z-index: 1;
 }
 
-.arrow-l:hover, .arrow-r:hover {
-    background-color: rgba(58, 58, 58, 0.5);
-    cursor: pointer;
-}
-
 #arrow-left:hover, #arrow-right:hover {
     cursor: pointer;
     color: rgb(255, 255, 255);
+    background-color: rgba(58, 58, 58, 0.5);
 }
 
-.arrow-l:active, .arrow-r:active {
+#arrow-left:active, #arrow-right:active {
     background-color: rgba(37, 37, 37, 0.753);
 }
 
