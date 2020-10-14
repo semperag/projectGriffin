@@ -63,14 +63,6 @@ body {
     z-index: 1;
 }
 
-.videogame-image > .interest-content {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-evenly;
-    background-color: rgba(91, 230, 255, 0.15);
-    border: 10px solid rgba(91, 230, 255, 0.1);
-}
-
 .interest {
     display: flex;
     width: 50%;
@@ -85,13 +77,46 @@ body {
     width: 100%;
 }
 
+.company {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.job-position {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: italic;
+    font-family: sans-serif;
+    border: solid rgba(255, 255, 255);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
 .interest-content {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     opacity: 1;
     color: white;
     z-index: 1;
     background-color: rgba(86, 230, 223, 0.25);
+    border: 10px solid rgba(91, 230, 255, 0.1);
+}
+
+.videogame-image > .interest-content {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background-color: rgba(91, 230, 255, 0.15);
     border: 10px solid rgba(91, 230, 255, 0.1);
 }
 
