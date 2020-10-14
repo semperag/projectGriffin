@@ -20,6 +20,7 @@ body {
 #content {
     margin: 0 auto;
     display: flex;
+    color: white;
     flex-direction: column;
     height: 100vh;
     width: 90%;
