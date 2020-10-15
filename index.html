@@ -6,25 +6,35 @@
         <meta name="description" content="weekly blog">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Griffin's Website</title>
-        <link rel="icon" type="image/png" href="pencil.png"/>
-        <link rel="stylesheet" href="index.css">
+        <link rel="icon" type="image/png" href="images/pencil.png"/>
+        <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script defer src="index.js"></script>
+        <script defer src="js/index.js"></script>
     </head>
     <body>
         <div id="root">
             <header>
+                <h1>Griffin Addams</h1>
+
+                <div id="menu-button">
+                    <svg viewBox="0 0 100 80" width="30" height="30">
+                        <rect fill="white" width="100" height="15"></rect>
+                        <rect fill="white" y="30" width="100" height="15"></rect>
+                        <rect fill="white" y="60" width="100" height="15"></rect>
+                    </svg>
+                </div>
+
             </header>
 
             <main>
                 <div id="left-panel">
 
                     <div id="top-left">
-                        <a href="https://www.patriots.com/" target="_blank"><img src="patriots.png" class="patriots-picture" alt="picture of new england patriots"></a>
+                        <a href="https://www.patriots.com/" target="_blank"><img src="images/patriots.png" class="patriots-picture" alt="picture of new england patriots"></a>
                     </div>
 
                     <div id="mid-left">
-                        <nav>
+                        <nav id="navigation">
                             <ul class="navlinks">
                                 <li id="home" class="navlink current-nav" >Home</a></li>
                                 <li id="experience" class="navlink">Experience</a></li>

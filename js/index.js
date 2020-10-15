@@ -1,6 +1,21 @@
 const pageNumber = document.querySelectorAll('.position');
 const currentNav = document.querySelectorAll('.navlink');
 const currentFrame = document.querySelectorAll('.frame');
+const navigation = document.getElementById('mid-left');
+const menuButton = document.getElementById('menu-button');
+
+menuButton.addEventListener('click', event => {
+    console.log("open");
+	navigation.classList.add('open');
+	event.stopPropagation();
+});
+
+
+document.addEventListener('click', () => {
+    console.log("close");
+	navigation.classList.remove('open');
+});
+
 let pageIndex = 0;
 let isAnimating = false;
 

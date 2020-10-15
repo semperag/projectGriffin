@@ -5,6 +5,19 @@ body {
     transition: 1s opacity;
 }
 
+header {
+    display: none;
+    Font-family: sans-serif;
+}
+
+H1 {
+	Margin: 0;
+}
+
+#menu-button{
+	Display: none;
+}
+
 main {
     display: flex;
     position: relative;
@@ -48,7 +61,6 @@ main {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    
 }
 
 #bottom-left {
@@ -275,6 +287,8 @@ main {
 
 @media only screen and (max-width: 1000px) {
     body {
+        min-width: 100%;
+        overflow-x: hidden;
     }
 
     #left-panel {
@@ -283,9 +297,65 @@ main {
 
     #right-panel {
         flex-shrink: 1;
+        min-height: 100vh;
+        min-width: 100vw;
     }
 
     #right-view {
         display: none;
     }
+/**
+    header {
+        display: flex;
+        color: white;
+        height: 50px;
+        width: 100%;
+        background-color: #00042c;
+        flex-direction: row;
+        justify-content: space-between;
+
+        position: sticky;
+        left: 0;
+        right: 0;
+        top: 0;
+
+        box-shadow: 0 0 20px black;
+    }
+*/
+    H1 {
+		Padding: 8px;
+    }
+
+    #mid-left {
+        visibility: visible;
+        Display: flex;
+        Position: absolute;
+        Top: 100%;
+        Right: 0;
+        z-index: 1;
+    }
+
+    #mid-left.open {
+        Display: block;
+    }
+
+    #mid-left > ul {
+        Flex-direction: column;
+    }
+
+    #mid-left > ul > li {
+        Border-top: 1px solid white;
+    }
+    
+    #menu-button {
+        Padding: 8px;
+        Display: flex;
+        Justify-content: center;
+        Align-items: center;
+    }
+
+    #menu-button:hover {
+        Background-color: gray;
+    }
+    
 }

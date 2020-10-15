@@ -9,7 +9,7 @@ main {
     position: relative;
 }
 
-#rightPanel {
+#right-panel {
     margin: 0;
     background: url("jmusunset.jpg");
     background-size: cover;
@@ -162,4 +162,17 @@ iframe {
 .credits:hover {
     cursor: pointer;
     background-color: rgb(240, 188, 120);;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+
+    #right-panel {
+        flex-shrink: 1;
+        min-height: 100vh;
+        min-width: 100vw;
+        width: 100vw;
+    }
 }
