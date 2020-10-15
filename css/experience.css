@@ -1,6 +1,9 @@
 body {
     background-image: linear-gradient(to top right, #ff8e2c, #2c4cff);
 }
+span {
+    min-width: 35px;
+}
 
 @media only screen and (max-width: 1500px) {
     .job-description {
@@ -12,5 +15,11 @@ body {
 @media only screen and (max-width: 1200px) {
     #content {
         margin-left: 25px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .job {
+        font-size: 1.2em;
     }
 }
