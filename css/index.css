@@ -257,21 +257,6 @@ a {
     text-decoration: none;
 }
 
-::-webkit-scrollbar {
-    width: 11px;
-    height: 11px;
-  }
-
-  /* Track */
-::-webkit-scrollbar-track {
-    background: #a7a7a7;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background:  rgb(0, 125, 197);
-}
-
 @media only screen and (max-width: 1000px) {
     body {
         min-width: 100%;

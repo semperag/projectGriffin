@@ -26,9 +26,6 @@ main {
 }
 
 .color-overlay {
-    height: 100%;
-    width: 100%;
-    background: #00064B;
     opacity: 0.25;
     position: absolute;
 }
