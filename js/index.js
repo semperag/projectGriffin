@@ -40,15 +40,21 @@ function forward() {
 
 function backward() {
     if (pageIndex > 0) {
-        pageNumber[pageIndex].classList.remove('current-page');
-        currentNav[pageIndex].classList.remove('current-nav');
-        currentFrame[pageIndex].classList.remove('current-frame');
-        pageIndex -= 1
-        currentFrame[pageIndex].classList.remove('way-past-frame');
-        pageNumber[pageIndex].classList.add('current-page');
-        currentFrame[pageIndex].classList.add('current-frame');
-        currentFrame[pageIndex].classList.remove('past-frame');
-        currentNav[pageIndex].classList.add('current-nav');
+
+        if (!isAnimating) {
+            isAnimating = true;
+            pageNumber[pageIndex].classList.remove('current-page');
+            currentNav[pageIndex].classList.remove('current-nav');
+            currentFrame[pageIndex].classList.remove('current-frame');
+            pageIndex -= 1
+            currentFrame[pageIndex].classList.remove('way-past-frame');
+            pageNumber[pageIndex].classList.add('current-page');
+            currentFrame[pageIndex].classList.add('current-frame');
+            currentFrame[pageIndex].classList.remove('past-frame');
+            currentNav[pageIndex].classList.add('current-nav');
+
+            loading();
+        }
     }
 }
 
@@ -106,7 +112,6 @@ function contactCalled() {
 function loading(){
     setTimeout(function(){ 
         isAnimating = false; 
-        console.log("works");
     }, 1500);
 }
 
