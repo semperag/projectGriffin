@@ -58,11 +58,7 @@ function newPage(event) {
 
       
         for (i = pageIndex; i < targetIndex; i++) {
-            currentFrame[i].style.opacity = 1;
-            currentFrame[targetIndex].classList.add('current-frame');
-            currentFrame[pageIndex].classList.remove('current-frame');
-            currentFrame[pageIndex].classList.add('past-frame');
-            
+            currentFrame[i].classList.add('past-frame');
         }
         pageIndex = targetIndex
     }
@@ -78,7 +74,6 @@ function newPage(event) {
         currentNav[targetIndex].classList.add('current-nav');
 
         for(i = pageIndex; i > targetIndex; i--) {
-
             currentFrame[i].classList.remove('way-past-frame');
             currentFrame[i].classList.remove('past-frame');
         }

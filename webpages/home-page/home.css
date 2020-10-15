@@ -11,7 +11,7 @@ main {
 
 #rightPanel {
     margin: 0;
-    background: url("JMU-sunset.jpg");
+    background: url("jmusunset.jpg");
     background-size: cover;
     display: flex;
     flex-grow: 1;

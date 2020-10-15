@@ -155,7 +155,7 @@ main {
 .frame.way-past-frame {
     display: none;
     transition: transform 1.5s ease-in-out;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
 }
 
 .arrow-d, .arrow-u {
