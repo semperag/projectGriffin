@@ -2,12 +2,13 @@ const pageNumber = document.querySelectorAll('.position');
 const currentNav = document.querySelectorAll('.navlink');
 const currentFrame = document.querySelectorAll('.frame');
 let pageIndex = 0;
-let notAnimating = true;
+let isAnimating = false;
 
 function forward() {
     if (pageIndex < currentFrame.length - 1) {
 
-        if (notAnimating) {
+        if (!isAnimating) {
+            isAnimating = true;
             pageNumber[pageIndex].classList.remove('current-page');
             currentFrame[pageIndex].classList.remove('current-frame');
             currentFrame[pageIndex].classList.add('past-frame');
@@ -57,7 +58,11 @@ function newPage(event) {
 
       
         for (i = pageIndex; i < targetIndex; i++) {
-            currentFrame[i].classList.add('way-past-frame');
+            currentFrame[i].style.opacity = 1;
+            currentFrame[targetIndex].classList.add('current-frame');
+            currentFrame[pageIndex].classList.remove('current-frame');
+            currentFrame[pageIndex].classList.add('past-frame');
+            
         }
         pageIndex = targetIndex
     }
@@ -73,6 +78,7 @@ function newPage(event) {
         currentNav[targetIndex].classList.add('current-nav');
 
         for(i = pageIndex; i > targetIndex; i--) {
+
             currentFrame[i].classList.remove('way-past-frame');
             currentFrame[i].classList.remove('past-frame');
         }
@@ -89,8 +95,9 @@ function contactCalled() {
 
 function loading(){
     setTimeout(function(){ 
-        window.notAnimating = false; 
-    }, 5000);
+        isAnimating = false; 
+        console.log("works");
+    }, 1500);
 }
 
 let el = document.getElementById('arrow-down');
