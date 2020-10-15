@@ -1,7 +1,9 @@
 const pageNumber = document.querySelectorAll('.position');
 const currentNav = document.querySelectorAll('.navlink');
 const currentFrame = document.querySelectorAll('.frame');
-const navigation = document.getElementById('mid-left');
+let pageIndex = 0;
+let isAnimating = false;
+/**const navigation = document.getElementById('mid-left');
 const menuButton = document.getElementById('menu-button');
 
 menuButton.addEventListener('click', event => {
@@ -15,9 +17,7 @@ document.addEventListener('click', () => {
     console.log("close");
 	navigation.classList.remove('open');
 });
-
-let pageIndex = 0;
-let isAnimating = false;
+*/
 
 function forward() {
     if (pageIndex < currentFrame.length - 1) {
@@ -60,47 +60,52 @@ function backward() {
 
 function newPage(event) {
 
-    let targetIndex;
-    for (i = 0; i < currentNav.length; i++) {
-        if (currentNav[i].id === event.target.id) {
-            targetIndex = i;
+    if (!isAnimating) {
+        isAnimating = true;
+        let targetIndex;
+        
+        for (i = 0; i < currentNav.length; i++) {
+            if (currentNav[i].id === event.target.id) {
+                targetIndex = i;
+            }
         }
-    }
 
-    if (targetIndex > pageIndex) {
-        pageNumber[pageIndex].classList.remove('current-page');
-        currentFrame[pageIndex].classList.remove('current-frame');
-        currentFrame[pageIndex].classList.add('past-frame');
-        currentNav[pageIndex].classList.remove('current-nav');
-        pageIndex += 1;
-        pageNumber[targetIndex].classList.add('current-page');
-        currentNav[targetIndex].classList.add('current-nav');
-        currentFrame[targetIndex].classList.add('current-frame');
+        if (targetIndex > pageIndex) {
+            pageNumber[pageIndex].classList.remove('current-page');
+            currentFrame[pageIndex].classList.remove('current-frame');
+            currentFrame[pageIndex].classList.add('past-frame');
+            currentNav[pageIndex].classList.remove('current-nav');
+            pageIndex += 1;
+            pageNumber[targetIndex].classList.add('current-page');
+            currentNav[targetIndex].classList.add('current-nav');
+            currentFrame[targetIndex].classList.add('current-frame');
 
-      
-        for (i = pageIndex; i < targetIndex; i++) {
-            currentFrame[i].classList.add('past-frame');
+        
+            for (i = pageIndex; i < targetIndex; i++) {
+                currentFrame[i].classList.add('past-frame');
+            }
+            pageIndex = targetIndex
         }
-        pageIndex = targetIndex
-    }
-    else if (targetIndex < pageIndex) {
-        pageNumber[pageIndex].classList.remove('current-page');
-        currentNav[pageIndex].classList.remove('current-nav');
-        currentFrame[pageIndex].classList.remove('current-frame');
-        pageIndex -= 1;
-        currentFrame[targetIndex].classList.remove('way-past-frame');
-        pageNumber[targetIndex].classList.add('current-page');
-        currentFrame[targetIndex].classList.add('current-frame');
-        currentFrame[targetIndex].classList.remove('past-frame');
-        currentNav[targetIndex].classList.add('current-nav');
+        else if (targetIndex < pageIndex) {
+            pageNumber[pageIndex].classList.remove('current-page');
+            currentNav[pageIndex].classList.remove('current-nav');
+            currentFrame[pageIndex].classList.remove('current-frame');
+            pageIndex -= 1;
+            currentFrame[targetIndex].classList.remove('way-past-frame');
+            pageNumber[targetIndex].classList.add('current-page');
+            currentFrame[targetIndex].classList.add('current-frame');
+            currentFrame[targetIndex].classList.remove('past-frame');
+            currentNav[targetIndex].classList.add('current-nav');
 
-        for(i = pageIndex; i > targetIndex; i--) {
-            currentFrame[i].classList.remove('way-past-frame');
-            currentFrame[i].classList.remove('past-frame');
+            for(i = pageIndex; i > targetIndex; i--) {
+                currentFrame[i].classList.remove('way-past-frame');
+                currentFrame[i].classList.remove('past-frame');
+            }
+            pageIndex = targetIndex;
         }
-        pageIndex = targetIndex;
+
+        loading();
     }
-    console.log(pageIndex);
 }
 
 function contactCalled() {
