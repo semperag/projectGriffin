@@ -2,9 +2,7 @@ body {
     background-image: linear-gradient(to top right, #ff8e2c, #2c4cff);
 }
 
-
 @media only screen and (max-width: 1500px) {
-
     .job-description {
         margin: 10px;
         margin-left: 7px;
@@ -12,7 +10,6 @@ body {
     }
 }
 @media only screen and (max-width: 1200px) {
-
     #content {
         margin-left: 25px;
     }

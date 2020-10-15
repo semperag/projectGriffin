@@ -2,24 +2,6 @@ body {
     background-image: linear-gradient(to top right, #ff8e2c, #2c4cff);
 }
 
-#stock-interest, #football-interest, #videogame-interest {
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    z-index: 1;
-}
-
-.interest {
-    display: flex;
-    width: 50%;
-    font-size: 1.5em;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    align-items: center;
-    z-index: 1;
-}
-
 .interest.videogame-image {
     justify-content: center;
 }
@@ -86,80 +68,6 @@ figure {
     width: 100%;
 }
 
-figcaption {
-    display: flex;
-    justify-content: center;
-    font-size: 0.7em;
-    flex-grow: 0;
-}
-
-.interest-description {
-    margin: 0;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: sans-serif;
-}
-
-.arrow-l, .arrow-r {
-    display: flex;
-    position: relative;
-    flex-grow: 1;
-    height: 85%;
-    justify-content: center;
-
-}
-
-#vacation-arrow-right, #vacation-arrow-left, 
-#high-school-arrow-right, #high-school-arrow-left {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    font-size: 3.5em;
-    color: rgba(255, 255, 255, 0.5);
-    user-select: none;
-    position: absolute;
-    flex-grow: 1;
-    height: 100%;
-    width: 100%;
-    bottom: 25%;
-    top: 1%;
-    
-    z-index: 1;
-}
-
-#vacation-arrow-right:hover, #vacation-arrow-left:hover,
-#high-school-arrow-right:hover, #high-school-arrow-left:hover {
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    background-color: rgba(58, 58, 58, 0.5);
-}
-
-#vacation-arrow-right:active, #vacation-arrow-left:active {
-    background-color: rgba(37, 37, 37, 0.753);
-}
-
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-  
-@-webkit-keyframes fade {
-    from {opacity: 0.4} 
-    to {opacity: 1}
-}
-  
-@keyframes fade {
-    from {opacity: 0.4} 
-    to {opacity: 1}
-}
 
 @media only screen and (max-width: 1200px) {
     
