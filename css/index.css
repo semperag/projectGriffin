@@ -236,6 +236,7 @@ main {
 }
 
 .credits {
+    display: none;
     height: 30px;
     width: 30px;
     background-color: rgb(209, 143, 56);
