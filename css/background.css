@@ -40,8 +40,56 @@ figure {
 }
 
 @media only screen and (max-width: 1200px) {
-
-    #content {
-        margin-left: 25px;
+    .videogame-image > .job-content {
+        width: 60%;
     }
+
+    .football-image > .job-content {
+        width: 60%;
+    }
+
+    .videogame-description > .job-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #stock-interest, #football-interest, #videogame-interest {
+        flex-direction: column;
+    }
+
+    .interest {
+        width: 100%;
+    }
+
+    .videogame-image > .job-content {
+        width: 40%;
+    }
+
+    .football-image > .job-content {
+        width: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .videogame-image > .job-content {
+        width: 60%;
+    }
+
+    .football-image > .job-content {
+        width: 60%;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+    .videogame-image > .job-content {
+        width: 75%;
+    }
+
+    .football-image > .job-content {
+        width: 75%;
+    }
+
 }
