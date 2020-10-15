@@ -46,23 +46,6 @@ body {
     box-sizing: border-box;
 }
 
-figure {
-    display: inline-block;
-    flex-direction: column;
-    justify-content: center;
-    height: 200px;
-    width: 80%;
-    margin: 0;
-}
-
-.image, .high-school-image {
-    display: none;
-}
-
-.current-image, .current-high-school-image {
-    display: inline-block;
-}
-
 .current-image > img, .current-high-school-image > img {
     height: 100%;
     width: 100%;
