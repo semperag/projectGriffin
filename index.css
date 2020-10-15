@@ -19,6 +19,7 @@ main {
     background-color: #00042c;
     position: relative;
     display: flex;
+    flex-shrink: 1;
     flex-direction: column;
     font-size: 3em;
     min-width: 225px;
@@ -113,11 +114,14 @@ main {
 
 #rightPanel {
     margin: 0;
+    width: 1550px;
     display: flex;
     flex-grow: 1;
+    flex-shrink: 0.95;
     position: relative;
     justify-content: center;
     overflow-y: hidden;
+    overflow-x: auto;
     min-width: 500px;
     min-height: 600px;
 }
