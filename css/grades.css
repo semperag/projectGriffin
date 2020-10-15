@@ -25,6 +25,9 @@ main {
 }
 
 h1 {
+    width: 100%;
+    font-size: 225%;
+    color: rgb(240, 218, 255);
     box-sizing: border-box;
     margin: 0;
     margin-top: 40px;
@@ -123,12 +126,6 @@ h1 {
     flex-grow: 1;
 }
 
-h1 {
-    width: 100%;
-    font-size: 225%;
-    color: rgb(240, 218, 255);
-}
-
 table {
     width: 80%;
     border-collapse: separate;
@@ -172,8 +169,37 @@ hr {
 }
 
 @media only screen and (max-width: 700px) {
+    #rightPanel {
+        margin-left: 5px;
+        margin-top: 80px;
+    }
+
+    .year-selector {
+        left: 3%;
+        top: 0.5%;
+    }
+    
+    #button {
+        margin-top: 15px;
+    }
 
     .gpa {
         display: none;
+    }
+
+    th {
+        font-size: 1.50em;
+    }
+
+    td {
+        font-size: 1.45em;
+    }
+
+    h1 {
+        font-size: 200%;
+    }
+
+    hr {
+        width: 98%;
     }
 }
