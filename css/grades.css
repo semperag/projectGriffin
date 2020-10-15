@@ -2,7 +2,6 @@ body {
     margin: 0;
     height: 100vh;
     background-image: linear-gradient(to bottom right, #ff8e2c, #2c4cff);
-    background: cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
     color: white; 
