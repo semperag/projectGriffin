@@ -113,8 +113,6 @@ ul {
 }
 
 @media only screen and (max-width: 1200px) {
-    body {
-    }
 
     #content {
         margin-left: 25px;
