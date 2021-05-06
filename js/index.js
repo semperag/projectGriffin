@@ -109,9 +109,23 @@ function newPage(event) {
 }
 
 function contactCalled() {
-    for (i = pageIndex; i < currentFrame.length; i++) {
-        forward();
-    }
+    /*while (pageIndex < currentFrame.length - 1) {
+
+            if (!isAnimating) {
+                isAnimating = true;
+                pageNumber[pageIndex].classList.remove('current-page');
+                currentFrame[pageIndex].classList.remove('current-frame');
+                currentFrame[pageIndex].classList.add('past-frame');
+                currentNav[pageIndex].classList.remove('current-nav');
+                pageIndex += 1
+                pageNumber[pageIndex].classList.add('current-page');
+                currentNav[pageIndex].classList.add('current-nav');
+                currentFrame[pageIndex].classList.add('current-frame');
+        
+                loading();
+            }
+    }*/
+    window.location.href = "mailto:semperag@dukes.jmu.edu";
 }
 
 function loading(){
