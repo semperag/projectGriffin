@@ -125,7 +125,7 @@ function contactCalled() {
                 loading();
             }
     }*/
-    window.location.href = "mailto:semperag@dukes.jmu.edu";
+    window.location.href = "mailto:adair.sempe@gmail.com";
 }
 
 function loading(){

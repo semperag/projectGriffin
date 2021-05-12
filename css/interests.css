@@ -30,7 +30,13 @@ body {
     height: 100%;
     width: 100%;
 }
-
+/*
+.football-image > :hover{
+    display: fixed;
+    height: 500px;
+    width: 500px;
+}
+*/
 .football-pic > img {
     height: 100%;
     width: 100%;
